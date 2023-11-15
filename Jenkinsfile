@@ -1,9 +1,10 @@
 pipeline {
     agent any
     stages {
-        stage('Hello') {
+        stage('Thing') {
             steps {
-                echo 'Hello World'
+                touch /tmp/thing
+                cp /tmp/thing /tmp/thing1
             }
         }
     }
