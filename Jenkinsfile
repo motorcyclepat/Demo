@@ -6,17 +6,17 @@ pipeline {
     stages {
         stage('Build') { 
             steps { 
-                sh 'apt-get update' 
+                sh 'whoami' 
             }
         }
         stage('Test'){
             steps {
-                sh 'apt-get upgrade'
+                sh 'sudo -l'
             }
         }
         stage('Deploy') {
             steps {
-                sh 'apt-get autoremove' 
+                sh 'echo $GROUP' 
             }
         }
     }
