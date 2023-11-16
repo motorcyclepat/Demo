@@ -4,19 +4,29 @@ pipeline {
         skipStagesAfterUnstable()
     }
     stages {
-        stage('Build') { 
+        stage('Vet candidate') { 
             steps { 
-                sh 'whoami' 
+                sh 'echo "Here is where we perform checks as needed"' 
             }
         }
-        stage('Test'){
+        stage('Document'){
             steps {
-                sh 'sudo -l'
+                sh 'echo "Here is where we begin documentation with Jira and SNOW"'
             }
         }
-        stage('Deploy') {
+        stage('Build'){
             steps {
-                sh 'echo $GROUP' 
+                sh 'echo "Here is where we perform actual build'
+            }
+        }
+        stage('Test') {
+            steps {
+                sh 'echo "here is where we validate our build is running via predefined responses or health checks ' 
+            }
+        }
+        stage('report'){
+            steps {
+                sh 'echo "here is where we report various metrics to accountable individuals and manage ticket closure "'
             }
         }
     }
