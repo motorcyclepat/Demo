@@ -5,7 +5,7 @@ pipeline {
     }
     stages {
         stage('Vet candidate') { 
-            steps { 
+            steps {
                 sh 'echo "Here is where we perform checks as needed"' 
             }
         }
