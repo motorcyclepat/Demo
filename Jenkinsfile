@@ -6,18 +6,17 @@ pipeline {
     stages {
         stage('Build') { 
             steps { 
-                sh 'touch .file' 
+                sh 'apt-get update' 
             }
         }
         stage('Test'){
             steps {
-                sh 'echo "this success" > .file'
-                sh 'echo "additional text" >> .file'
+                sh 'apt-get upgrade'
             }
         }
         stage('Deploy') {
             steps {
-                sh 'cat .file' 
+                sh 'apt-get autoremove' 
             }
         }
     }
