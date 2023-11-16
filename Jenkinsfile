@@ -16,12 +16,12 @@ pipeline {
         }
         stage('Build'){
             steps {
-                sh 'echo "Here is where we perform actual build'
+                sh 'echo "Here is where we perform actual build"'
             }
         }
         stage('Test') {
             steps {
-                sh 'echo "here is where we validate our build is running via predefined responses or health checks ' 
+                sh 'echo "here is where we validate our build is running via predefined responses or health checks"' 
             }
         }
         stage('report'){
