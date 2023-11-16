@@ -14,9 +14,9 @@ pipeline {
                 sh 'echo "Here is where we begin documentation with Jira and SNOW"'
             }
         }
-        stage('Build'){
+        stage('Build and Deploy'){
             steps {
-                sh 'echo "Here is where we perform actual build"'
+                sh 'echo "Here is where we perform actual build and deploy"'
             }
         }
         stage('Test') {
