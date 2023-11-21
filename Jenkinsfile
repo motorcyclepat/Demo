@@ -30,5 +30,3 @@ pipeline {
         sh 'echo "here is where we report various metrics to accountable individuals and manage ticket closure "'
       }
     }
-
-  }
