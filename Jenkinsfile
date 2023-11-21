@@ -1,33 +1,33 @@
-pipeline {
-  agent any
-  stages {
-    stage('Vet candidate') {
-      steps {
-        sh 'echo "Here is where we perform checks as needed"'
-      }
+pipeline { 
+    agent any 
+    options {
+        skipStagesAfterUnstable()
     }
-
-    stage('Document') {
-      steps {
-        sh 'echo "Here is where we begin documentation with Jira and SNOW"'
-      }
+    stages {
+        stage('Vet candidate') { 
+            steps {
+                sh 'echo "Here is where we perform checks as needed"' 
+            }
+        }
+        stage('Document'){
+            steps {
+                sh 'echo "Here is where we begin documentation with Jira and SNOW"'
+            }
+        }
+        stage('Build and Deploy'){
+            steps {
+                sh 'echo "Here is where we perform actual build and deploy"'
+            }
+        }
+        stage('Test') {
+            steps {
+                sh 'echo "here is where we validate our build is running via predefined responses or health checks"' 
+            }
+        }
+        stage('report'){
+            steps {
+                sh 'echo "here is where we report various metrics to accountable individuals and manage ticket closure "'
+            }
+        }
     }
-
-    stage('Build and Deploy') {
-      steps {
-        sh 'echo "Here is where we perform actual build and deploy"'
-      }
-    }
-
-    stage('Test') {
-      steps {
-        sh 'echo "here is where we validate our build is running via predefined responses or health checks"'
-      }
-    }
-
-    stage('report') {
-      steps {
-        sh 'echo "here is where we report various metrics to accountable individuals and manage ticket closure "'
-      }
-    }
-  }
+}
