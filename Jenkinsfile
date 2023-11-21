@@ -32,10 +32,3 @@ pipeline {
     }
 
   }
-  environment {
-    Env = 'Prod'
-  }
-  options {
-    skipStagesAfterUnstable()
-  }
-}
