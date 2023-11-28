@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Vet candidate') { 
             steps {
-                sh 'echo "Here is where we perform checks as needed"' 
+                sh 'echo "Here is where we copy the files from S3 and perform checks as needed"' 
             }
         }
         stage('Document'){
