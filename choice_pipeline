@@ -1,0 +1,7 @@
+    parameters {
+        choice(
+            name: 'LOGGING_LEVEL',
+            choices: ERROR, LOG
+            description: 'Select a choice'
+        )
+    }
