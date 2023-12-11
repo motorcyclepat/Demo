@@ -4,7 +4,7 @@ pipeline {
         skipStagesAfterUnstable()
     }
     stages {
-        stage('Vet candidate') { 
+        stage('Vet candidate') {
             steps {
                 sh 'echo $Parameter_Name'
             }
