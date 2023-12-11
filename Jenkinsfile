@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Vet candidate') { 
             steps {
-                sh 'echo $Parameter_Name' 
+                sh 'echo $Parameter_Name'
             }
         }
         stage('Document'){
