@@ -4,6 +4,13 @@ pipeline {
         skipStagesAfterUnstable()
     }
     stages {
+    parameters {
+        choice(
+            name: 'LOGGING_LEVEL',
+            choices: ERROR, LOG
+            description: 'Select a choice'
+        )
+    }
         stage('Vet candidate') { 
             steps {
                 sh 'echo "Here is where we copy the files from S3 and perform checks as needed"' 
