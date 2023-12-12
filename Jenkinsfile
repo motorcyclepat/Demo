@@ -1,4 +1,4 @@
 node()
 {
-     print "DEBUG: ParameterZero  = ${env.ParameterZero}"
+     print "DEBUG: parameter ParameterZero = ${env.ParameterZero}"
 }
