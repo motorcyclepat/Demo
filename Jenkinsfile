@@ -3,7 +3,7 @@ pipeline {
 
     parameters {
         string(name: 'ENVIRONMENT', description: 'Select environment', defaultValue: 'dev')
-        reactiveInput(name: 'BRANCH', description: 'Select branch', script: """
+        reactiveChoice(name: 'BRANCH', description: 'Select branch', script: """
             // Use the selected environment to dynamically generate the branch options
             def branchOptions = ['dev': 'development', 'qa': 'qa', 'prod': 'master']
             return branchOptions[params.ENVIRONMENT]
