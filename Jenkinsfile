@@ -1,4 +1,4 @@
-pipeline {
+https://github.com/motorcyclepat/Demo/pipeline {
     agent any
 
     parameters {
@@ -15,7 +15,7 @@ pipeline {
             steps {
                 script {
                     // Checkout the selected branch
-                    checkout([$class: 'GitSCM', branches: [[name: "*/${params.BRANCH}"]], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'your-git-credentials-id', url: 'your-git-repository-url']]])
+                    checkout([$class: 'GitSCM', branches: [[name: "*/${params.BRANCH}"]], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], url: 'https://github.com/motorcyclepat/Demo/']]])
                 }
             }
         }
